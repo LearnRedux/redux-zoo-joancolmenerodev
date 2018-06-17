@@ -89,13 +89,13 @@ describe('Animals', () => {
       });
 
       it('should append to the end', () => {
-        const lulu = { name: 'Lulu', presnet: true };
+        const lulu = { name: 'Lulu', present: true };
         const state = animals([lulu], receiveAnimal('Savio'));
         expect(state).toMatchObject([lulu, { name: 'Savio' }]);
       });
 
       it('should not modify the instance of other animals', () => {
-        const lulu = { name: 'Lulu', presnet: true };
+        const lulu = { name: 'Lulu', present: true };
         const state = animals([lulu], receiveAnimal());
         expect(state[0]).toBe(lulu);
       });
